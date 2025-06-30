@@ -21,6 +21,7 @@ import {
   AlertCircle,
   XCircle
 } from 'lucide-react';
+import Link from 'next/link';
 
 interface CommandItem {
   id: string;
@@ -427,6 +428,79 @@ export default function Dashboard() {
                 </div>
               </div>
             )}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <h3 className="text-lg font-semibold text-gray-800 mb-3">Project Management</h3>
+            <p className="text-gray-600 mb-4">Create, track, and manage your projects with full CRUD operations.</p>
+            <Link href="/projects" className="inline-flex items-center text-blue-600 hover:text-blue-800">
+              Manage Projects →
+            </Link>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <h3 className="text-lg font-semibold text-gray-800 mb-3">Task Management</h3>
+            <p className="text-gray-600 mb-4">Organize tasks, set priorities, and track progress efficiently.</p>
+            <Link href="/tasks" className="inline-flex items-center text-blue-600 hover:text-blue-800">
+              Manage Tasks →
+            </Link>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <h3 className="text-lg font-semibold text-gray-800 mb-3">Command Center</h3>
+            <p className="text-gray-600 mb-4">Execute commands and manage system operations centrally.</p>
+            <Link href="/commands" className="inline-flex items-center text-blue-600 hover:text-blue-800">
+              View Commands →
+            </Link>
+          </div>
+        </div>
+
+        {/* New Feature Section */}
+        <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-8 rounded-lg border border-purple-200 mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">🚀 New Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-purple-100">
+              <h3 className="text-lg font-semibold text-purple-800 mb-2">Barton Doctrine Compliance</h3>
+              <p className="text-gray-600 mb-3">Built-in validation and enforcement of coding standards and best practices.</p>
+              <div className="flex items-center text-sm text-purple-600">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                Active & Enforced
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-purple-100">
+              <h3 className="text-lg font-semibold text-purple-800 mb-2">Real-time Validation</h3>
+              <p className="text-gray-600 mb-3">Automatic validation of all operations with detailed error reporting.</p>
+              <div className="flex items-center text-sm text-purple-600">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                Live Monitoring
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Quick Actions */}
+        <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+          <h2 className="text-xl font-semibold text-gray-800 mb-4">Quick Actions</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <button className="p-4 text-center bg-blue-50 hover:bg-blue-100 rounded-lg border border-blue-200 transition-colors">
+              <div className="text-2xl mb-2">📁</div>
+              <div className="text-sm font-medium text-blue-800">New Project</div>
+            </button>
+            <button className="p-4 text-center bg-green-50 hover:bg-green-100 rounded-lg border border-green-200 transition-colors">
+              <div className="text-2xl mb-2">✅</div>
+              <div className="text-sm font-medium text-green-800">Add Task</div>
+            </button>
+            <button className="p-4 text-center bg-purple-50 hover:bg-purple-100 rounded-lg border border-purple-200 transition-colors">
+              <div className="text-2xl mb-2">⚡</div>
+              <div className="text-sm font-medium text-purple-800">Run Command</div>
+            </button>
+            <button className="p-4 text-center bg-orange-50 hover:bg-orange-100 rounded-lg border border-orange-200 transition-colors">
+              <div className="text-2xl mb-2">📊</div>
+              <div className="text-sm font-medium text-orange-800">View Reports</div>
+            </button>
           </div>
         </div>
       </main>
