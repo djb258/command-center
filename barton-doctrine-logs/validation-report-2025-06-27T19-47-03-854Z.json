@@ -1,0 +1,46 @@
+{
+  "timestamp": "2025-06-27T19:47:03.853Z",
+  "validation_summary": {
+    "total_violations": 4,
+    "tools_checked": 11,
+    "schemas_checked": 5,
+    "compliance_status": "VIOLATIONS_DETECTED"
+  },
+  "detailed_results": {
+    "tools": {
+      "checked": 11,
+      "violations": 4,
+      "details": [
+        {
+          "tool": "firebase_push.ts",
+          "violations": [
+            "Database operations without Barton Doctrine validation"
+          ]
+        },
+        {
+          "tool": "bigquery_ingest.ts",
+          "violations": [
+            "Database operations without Barton Doctrine validation"
+          ]
+        },
+        {
+          "tool": "neon_sync.ts",
+          "violations": [
+            "Database operations without Barton Doctrine validation"
+          ]
+        },
+        {
+          "tool": "rtrvr_integration.ts",
+          "violations": [
+            "Database operations without Barton Doctrine validation"
+          ]
+        }
+      ]
+    },
+    "schemas": {
+      "checked": 5,
+      "violations": 0,
+      "details": []
+    }
+  }
+}

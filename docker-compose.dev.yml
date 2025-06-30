@@ -1,0 +1,181 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database (alternative to Neon for local dev)
+  postgres:
+    image: postgres:15-alpine
+    container_name: cursor-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: cursor_dev
+      POSTGRES_USER: cursor_user
+      POSTGRES_PASSWORD: cursor_password
+      POSTGRES_INITDB_ARGS: "--auth-host=scram-sha-256"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./sql/init:/docker-entrypoint-initdb.d
+    networks:
+      - cursor-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cursor_user -d cursor_dev"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis for caching and sessions
+  redis:
+    image: redis:7-alpine
+    container_name: cursor-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+      - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
+    command: redis-server /usr/local/etc/redis/redis.conf
+    networks:
+      - cursor-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # MongoDB (if using NoSQL)
+  mongodb:
+    image: mongo:6.0
+    container_name: cursor-mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: cursor_admin
+      MONGO_INITDB_ROOT_PASSWORD: cursor_mongo_password
+      MONGO_INITDB_DATABASE: cursor_dev
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+      - ./mongo/init:/docker-entrypoint-initdb.d
+    networks:
+      - cursor-network
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/cursor_dev --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Adminer for database management
+  adminer:
+    image: adminer:4.8.1
+    container_name: cursor-adminer
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      ADMINER_DEFAULT_SERVER: postgres
+      ADMINER_DESIGN: dracula
+    networks:
+      - cursor-network
+    depends_on:
+      - postgres
+
+  # Redis Commander for Redis management
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: cursor-redis-commander
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    environment:
+      REDIS_HOSTS: local:redis:6379
+      HTTP_USER: admin
+      HTTP_PASSWORD: admin
+    networks:
+      - cursor-network
+    depends_on:
+      - redis
+
+  # Mongo Express for MongoDB management
+  mongo-express:
+    image: mongo-express:1.0.0-alpha
+    container_name: cursor-mongo-express
+    restart: unless-stopped
+    ports:
+      - "8082:8081"
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: cursor_admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: cursor_mongo_password
+      ME_CONFIG_MONGODB_URL: mongodb://cursor_admin:cursor_mongo_password@mongodb:27017/
+      ME_CONFIG_BASICAUTH_USERNAME: admin
+      ME_CONFIG_BASICAUTH_PASSWORD: admin
+    networks:
+      - cursor-network
+    depends_on:
+      - mongodb
+
+  # Local SMTP server for email testing
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: cursor-mailhog
+    restart: unless-stopped
+    ports:
+      - "1025:1025"  # SMTP port
+      - "8025:8025"  # Web UI port
+    networks:
+      - cursor-network
+
+  # Nginx for local reverse proxy (optional)
+  nginx:
+    image: nginx:alpine
+    container_name: cursor-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    networks:
+      - cursor-network
+    depends_on:
+      - adminer
+      - redis-commander
+      - mongo-express
+
+  # Development file watcher and sync
+  file-sync:
+    image: alpine:latest
+    container_name: cursor-file-sync
+    restart: unless-stopped
+    volumes:
+      - .:/workspace
+      - /var/run/docker.sock:/var/run/docker.sock
+    working_dir: /workspace
+    command: |
+      sh -c "
+        apk add --no-cache inotify-tools docker-cli &&
+        echo 'Starting file sync watcher...' &&
+        while inotifywait -r -e modify,create,delete /workspace; do
+          echo 'Files changed, triggering sync...'
+          # Add your sync commands here
+        done
+      "
+    networks:
+      - cursor-network
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  mongodb_data:
+    driver: local
+
+networks:
+  cursor-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16 

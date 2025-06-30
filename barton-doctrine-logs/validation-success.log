@@ -1,0 +1,14 @@
+{"timestamp":"2025-06-27T02:01:36.208Z","tool":"test_tool","operation":"unknown","status":"SUCCESS","schema_compliance":"BARTON_DOCTRINE","execution_signature":"82070102f9c63ffc89d8ebc7bbde5e07"}
+{"timestamp":"2025-06-27T02:01:36.300Z","tool":"test_tool","operation":"firebase_operation","status":"SUCCESS","schema_compliance":"BARTON_DOCTRINE","execution_signature":"21d2dfd19f7c16290150eb50830f87f4"}
+{"timestamp":"2025-06-27T02:01:36.304Z","tool":"test_tool","operation":"neon_operation","status":"SUCCESS","schema_compliance":"BARTON_DOCTRINE","execution_signature":"20bcd75eb95b93aec464ba354308aadd"}
+{"timestamp":"2025-06-27T02:01:36.307Z","tool":"test_tool","operation":"bigquery_operation","status":"SUCCESS","schema_compliance":"BARTON_DOCTRINE","execution_signature":"b6cf051b75fef1b27038887e97c7fc47"}
+{"timestamp":"2025-06-27T02:01:36.312Z","tool":"middleware_test","operation":"test_operation","status":"SUCCESS","schema_compliance":"BARTON_DOCTRINE","execution_signature":"6b6493552bacf95324df5772cfdc363d"}
+{"timestamp":"2025-06-27T02:01:36.313Z","tool":"test","operation":"firebase_operation","status":"SUCCESS","schema_compliance":"BARTON_DOCTRINE","execution_signature":"cc8c63331e2f0e3c4cbf104706e13ae7"}
+{"timestamp":"2025-06-27T02:01:36.314Z","tool":"test","operation":"neon_operation","status":"SUCCESS","schema_compliance":"BARTON_DOCTRINE","execution_signature":"cc8c63331e2f0e3c4cbf104706e13ae7"}
+{"timestamp":"2025-06-27T02:01:36.316Z","tool":"test","operation":"bigquery_operation","status":"SUCCESS","schema_compliance":"BARTON_DOCTRINE","execution_signature":"cc8c63331e2f0e3c4cbf104706e13ae7"}
+{"timestamp":"2025-06-27T02:05:16.740Z","tool":"nuclear_demo_tool","operation":"demo_operation","status":"SUCCESS","schema_compliance":"BARTON_DOCTRINE","execution_signature":"b2e81cf8a6fdae2f1765f74a697a9543"}
+{"timestamp":"2025-06-27T02:05:16.743Z","tool":"nuclear_demo_tool","operation":"firebase_nuclear_operation","status":"SUCCESS","schema_compliance":"BARTON_DOCTRINE","execution_signature":"b2e81cf8a6fdae2f1765f74a697a9543"}
+{"timestamp":"2025-06-27T02:05:16.744Z","tool":"nuclear_demo_tool","operation":"neon_nuclear_operation","status":"SUCCESS","schema_compliance":"BARTON_DOCTRINE","execution_signature":"b2e81cf8a6fdae2f1765f74a697a9543"}
+{"timestamp":"2025-06-27T02:05:16.745Z","tool":"nuclear_demo_tool","operation":"bigquery_nuclear_operation","status":"SUCCESS","schema_compliance":"BARTON_DOCTRINE","execution_signature":"b2e81cf8a6fdae2f1765f74a697a9543"}
+{"timestamp":"2025-06-27T17:31:32.380Z","tool":"simple-orchestrator","operation":"orchestration-test","status":"SUCCESS","schema_compliance":"BARTON_DOCTRINE","execution_signature":"675e5f15ad402a75b002efb259a5a9d1"}
+{"timestamp":"2025-06-27T17:34:02.372Z","tool":"simple-orchestrator","operation":"orchestration-test","status":"SUCCESS","schema_compliance":"BARTON_DOCTRINE","execution_signature":"b91f8f5567e94295322916b8a2990d59"}

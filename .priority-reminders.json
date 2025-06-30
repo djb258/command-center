@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1750973559120",
+    "type": "tool",
+    "title": "Abacus",
+    "description": "Install and configure Abacus tool for development workflow",
+    "priority": "medium",
+    "created": "2025-06-26T21:32:39.120Z",
+    "completed": true,
+    "autoBackup": true
+  },
+  {
+    "id": "1750973614673",
+    "type": "api_key",
+    "title": "Abacus.AI",
+    "description": "Set up Abacus.AI API key and ML platform integration",
+    "priority": "high",
+    "created": "2025-06-26T21:33:34.673Z",
+    "completed": false,
+    "autoBackup": true
+  },
+  {
+    "id": "1750973850281",
+    "type": "api_key",
+    "title": "Apify",
+    "description": "Set up Apify web scraping platform API key and automation",
+    "priority": "high",
+    "created": "2025-06-26T21:37:30.282Z",
+    "completed": false,
+    "autoBackup": true
+  },
+  {
+    "id": "1750973859353",
+    "type": "api_key",
+    "title": "Genspark",
+    "description": "Set up Genspark AI search engine API key and integration",
+    "priority": "high",
+    "created": "2025-06-26T21:37:39.353Z",
+    "completed": false,
+    "autoBackup": true
+  },
+  {
+    "id": "1750974334620",
+    "type": "api_key",
+    "title": "RTRVR.AI",
+    "description": "Set up RTRVR.AI retrieval and search API key for intelligent data discovery",
+    "priority": "high",
+    "created": "2025-06-26T21:45:34.620Z",
+    "completed": false,
+    "autoBackup": true
+  },
+  {
+    "id": "1750974339802",
+    "type": "api_key",
+    "title": "Browserless.ai",
+    "description": "Set up Browserless.ai headless browser automation API key and endpoints",
+    "priority": "high",
+    "created": "2025-06-26T21:45:39.802Z",
+    "completed": false,
+    "autoBackup": true
+  },
+  {
+    "id": "1750978972046",
+    "type": "api_key",
+    "title": "LOVEABLE_API_KEY",
+    "description": "Get your Loveable.dev API key from https://lovable.dev/settings/api and add it to your .env file for the AI no-code platform integration",
+    "priority": "high",
+    "created": "2025-06-26T23:02:52.046Z",
+    "completed": false,
+    "autoBackup": true
+  }
+]

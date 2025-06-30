@@ -1,0 +1,182 @@
+[
+  {
+    "timestamp": "2025-06-27T01:17:52.404Z",
+    "summary": "Sync completed: 0/2 machines successful",
+    "results": {
+      "local-machine": {
+        "success": false,
+        "errors": [
+          "Validation failed: Required environment variable missing: MINDPAL_API_KEY"
+        ]
+      },
+      "remote-server": {
+        "success": false,
+        "errors": [
+          "Command failed: rsync -avz --backup-dir=\"C:\\Users\\CUSTOM PC\\Desktop\\cursor-blueprint-enforcer\\backups\\remote-server\\2025-06-27T01-17-52-376Z\" your-username@your-server.com:~/cursor-config/ ~/projects/cursor-blueprint-enforcer/ ./backups/remote-server/"
+        ]
+      }
+    },
+    "log": [
+      "[2025-06-27T01:17:47.545Z] Starting machine synchronization...",
+      "[2025-06-27T01:17:47.546Z] Syncing machine: local-machine (local)",
+      "[2025-06-27T01:17:47.547Z] Creating backup for local-machine in C:\\Users\\CUSTOM PC\\Desktop\\cursor-blueprint-enforcer\\backups\\local-machine\\2025-06-27T01-17-47-547Z",
+      "[2025-06-27T01:17:47.547Z] Syncing Cursor config for local-machine",
+      "[2025-06-27T01:17:52.355Z] Syncing mindpal config for local-machine",
+      "[2025-06-27T01:17:52.357Z] Syncing deerflow config for local-machine",
+      "[2025-06-27T01:17:52.360Z] Syncing render config for local-machine",
+      "[2025-06-27T01:17:52.363Z] Syncing make config for local-machine",
+      "[2025-06-27T01:17:52.366Z] Syncing firebase config for local-machine",
+      "[2025-06-27T01:17:52.370Z] Syncing bigquery config for local-machine",
+      "[2025-06-27T01:17:52.373Z] Syncing neon config for local-machine",
+      "[2025-06-27T01:17:52.375Z] Validating sync for local-machine",
+      "[2025-06-27T01:17:52.376Z] ❌ Failed to sync local-machine: Validation failed: Required environment variable missing: MINDPAL_API_KEY",
+      "[2025-06-27T01:17:52.376Z] Syncing machine: remote-server (remote)",
+      "[2025-06-27T01:17:52.376Z] Creating backup for remote-server in C:\\Users\\CUSTOM PC\\Desktop\\cursor-blueprint-enforcer\\backups\\remote-server\\2025-06-27T01-17-52-376Z",
+      "[2025-06-27T01:17:52.404Z] ❌ Failed to sync remote-server: Command failed: rsync -avz --backup-dir=\"C:\\Users\\CUSTOM PC\\Desktop\\cursor-blueprint-enforcer\\backups\\remote-server\\2025-06-27T01-17-52-376Z\" your-username@your-server.com:~/cursor-config/ ~/projects/cursor-blueprint-enforcer/ ./backups/remote-server/"
+    ]
+  },
+  {
+    "timestamp": "2025-06-27T01:19:02.361Z",
+    "summary": "Sync completed: 0/2 machines successful",
+    "results": {
+      "local-machine": {
+        "success": false,
+        "errors": [
+          "Validation failed: Required environment variable missing: MINDPAL_API_KEY"
+        ]
+      },
+      "remote-server": {
+        "success": false,
+        "errors": [
+          "Command failed: rsync -avz --backup-dir=\"C:\\Users\\CUSTOM PC\\Desktop\\cursor-blueprint-enforcer\\backups\\remote-server\\2025-06-27T01-19-02-332Z\" your-username@your-server.com:~/cursor-config/ ~/projects/cursor-blueprint-enforcer/ ./backups/remote-server/"
+        ]
+      }
+    },
+    "log": [
+      "[2025-06-27T01:18:57.499Z] Starting machine synchronization...",
+      "[2025-06-27T01:18:57.500Z] Syncing machine: local-machine (local)",
+      "[2025-06-27T01:18:57.500Z] Creating backup for local-machine in C:\\Users\\CUSTOM PC\\Desktop\\cursor-blueprint-enforcer\\backups\\local-machine\\2025-06-27T01-18-57-500Z",
+      "[2025-06-27T01:18:57.501Z] Syncing Cursor config for local-machine",
+      "[2025-06-27T01:19:02.310Z] Syncing mindpal config for local-machine",
+      "[2025-06-27T01:19:02.313Z] Syncing deerflow config for local-machine",
+      "[2025-06-27T01:19:02.315Z] Syncing render config for local-machine",
+      "[2025-06-27T01:19:02.319Z] Syncing make config for local-machine",
+      "[2025-06-27T01:19:02.321Z] Syncing firebase config for local-machine",
+      "[2025-06-27T01:19:02.326Z] Syncing bigquery config for local-machine",
+      "[2025-06-27T01:19:02.328Z] Syncing neon config for local-machine",
+      "[2025-06-27T01:19:02.331Z] Validating sync for local-machine",
+      "[2025-06-27T01:19:02.331Z] ❌ Failed to sync local-machine: Validation failed: Required environment variable missing: MINDPAL_API_KEY",
+      "[2025-06-27T01:19:02.332Z] Syncing machine: remote-server (remote)",
+      "[2025-06-27T01:19:02.332Z] Creating backup for remote-server in C:\\Users\\CUSTOM PC\\Desktop\\cursor-blueprint-enforcer\\backups\\remote-server\\2025-06-27T01-19-02-332Z",
+      "[2025-06-27T01:19:02.361Z] ❌ Failed to sync remote-server: Command failed: rsync -avz --backup-dir=\"C:\\Users\\CUSTOM PC\\Desktop\\cursor-blueprint-enforcer\\backups\\remote-server\\2025-06-27T01-19-02-332Z\" your-username@your-server.com:~/cursor-config/ ~/projects/cursor-blueprint-enforcer/ ./backups/remote-server/"
+    ]
+  },
+  {
+    "timestamp": "2025-06-27T01:19:33.534Z",
+    "summary": "Sync completed: 0/2 machines successful",
+    "results": {
+      "local-machine": {
+        "success": false,
+        "errors": [
+          "Validation failed: Required environment variable missing: MINDPAL_API_KEY"
+        ]
+      },
+      "remote-server": {
+        "success": false,
+        "errors": [
+          "Command failed: rsync -avz --backup-dir=\"C:\\Users\\CUSTOM PC\\Desktop\\cursor-blueprint-enforcer\\backups\\remote-server\\2025-06-27T01-19-33-506Z\" your-username@your-server.com:~/cursor-config/ ~/projects/cursor-blueprint-enforcer/ ./backups/remote-server/"
+        ]
+      }
+    },
+    "log": [
+      "[2025-06-27T01:19:28.577Z] Starting machine synchronization...",
+      "[2025-06-27T01:19:28.578Z] Syncing machine: local-machine (local)",
+      "[2025-06-27T01:19:28.578Z] Creating backup for local-machine in C:\\Users\\CUSTOM PC\\Desktop\\cursor-blueprint-enforcer\\backups\\local-machine\\2025-06-27T01-19-28-578Z",
+      "[2025-06-27T01:19:28.579Z] Syncing Cursor config for local-machine",
+      "[2025-06-27T01:19:33.481Z] Syncing mindpal config for local-machine",
+      "[2025-06-27T01:19:33.484Z] Syncing deerflow config for local-machine",
+      "[2025-06-27T01:19:33.487Z] Syncing render config for local-machine",
+      "[2025-06-27T01:19:33.491Z] Syncing make config for local-machine",
+      "[2025-06-27T01:19:33.494Z] Syncing firebase config for local-machine",
+      "[2025-06-27T01:19:33.499Z] Syncing bigquery config for local-machine",
+      "[2025-06-27T01:19:33.502Z] Syncing neon config for local-machine",
+      "[2025-06-27T01:19:33.504Z] Validating sync for local-machine",
+      "[2025-06-27T01:19:33.505Z] ❌ Failed to sync local-machine: Validation failed: Required environment variable missing: MINDPAL_API_KEY",
+      "[2025-06-27T01:19:33.506Z] Syncing machine: remote-server (remote)",
+      "[2025-06-27T01:19:33.506Z] Creating backup for remote-server in C:\\Users\\CUSTOM PC\\Desktop\\cursor-blueprint-enforcer\\backups\\remote-server\\2025-06-27T01-19-33-506Z",
+      "[2025-06-27T01:19:33.533Z] ❌ Failed to sync remote-server: Command failed: rsync -avz --backup-dir=\"C:\\Users\\CUSTOM PC\\Desktop\\cursor-blueprint-enforcer\\backups\\remote-server\\2025-06-27T01-19-33-506Z\" your-username@your-server.com:~/cursor-config/ ~/projects/cursor-blueprint-enforcer/ ./backups/remote-server/"
+    ]
+  },
+  {
+    "timestamp": "2025-06-27T01:23:14.381Z",
+    "summary": "Sync completed: 0/2 machines successful",
+    "results": {
+      "local-machine": {
+        "success": false,
+        "errors": [
+          "Validation failed: Required environment variable missing: RENDER_WEBHOOK_URL"
+        ]
+      },
+      "remote-server": {
+        "success": false,
+        "errors": [
+          "Command failed: rsync -avz --backup-dir=\"C:\\Users\\CUSTOM PC\\Desktop\\cursor-blueprint-enforcer\\backups\\remote-server\\2025-06-27T01-23-14-352Z\" your-username@your-server.com:~/cursor-config/ ~/projects/cursor-blueprint-enforcer/ ./backups/remote-server/"
+        ]
+      }
+    },
+    "log": [
+      "[2025-06-27T01:23:09.527Z] Starting machine synchronization...",
+      "[2025-06-27T01:23:09.528Z] Syncing machine: local-machine (local)",
+      "[2025-06-27T01:23:09.528Z] Creating backup for local-machine in C:\\Users\\CUSTOM PC\\Desktop\\cursor-blueprint-enforcer\\backups\\local-machine\\2025-06-27T01-23-09-528Z",
+      "[2025-06-27T01:23:09.528Z] Syncing Cursor config for local-machine",
+      "[2025-06-27T01:23:14.330Z] Syncing mindpal config for local-machine",
+      "[2025-06-27T01:23:14.333Z] Syncing deerflow config for local-machine",
+      "[2025-06-27T01:23:14.335Z] Syncing render config for local-machine",
+      "[2025-06-27T01:23:14.339Z] Syncing make config for local-machine",
+      "[2025-06-27T01:23:14.342Z] Syncing firebase config for local-machine",
+      "[2025-06-27T01:23:14.346Z] Syncing bigquery config for local-machine",
+      "[2025-06-27T01:23:14.349Z] Syncing neon config for local-machine",
+      "[2025-06-27T01:23:14.351Z] Validating sync for local-machine",
+      "[2025-06-27T01:23:14.352Z] ❌ Failed to sync local-machine: Validation failed: Required environment variable missing: RENDER_WEBHOOK_URL",
+      "[2025-06-27T01:23:14.352Z] Syncing machine: remote-server (remote)",
+      "[2025-06-27T01:23:14.352Z] Creating backup for remote-server in C:\\Users\\CUSTOM PC\\Desktop\\cursor-blueprint-enforcer\\backups\\remote-server\\2025-06-27T01-23-14-352Z",
+      "[2025-06-27T01:23:14.381Z] ❌ Failed to sync remote-server: Command failed: rsync -avz --backup-dir=\"C:\\Users\\CUSTOM PC\\Desktop\\cursor-blueprint-enforcer\\backups\\remote-server\\2025-06-27T01-23-14-352Z\" your-username@your-server.com:~/cursor-config/ ~/projects/cursor-blueprint-enforcer/ ./backups/remote-server/"
+    ]
+  },
+  {
+    "timestamp": "2025-06-27T01:26:09.100Z",
+    "summary": "Sync completed: 0/2 machines successful",
+    "results": {
+      "local-machine": {
+        "success": false,
+        "errors": [
+          "Validation failed: Required environment variable missing: RENDER_WEBHOOK_URL"
+        ]
+      },
+      "remote-server": {
+        "success": false,
+        "errors": [
+          "Command failed: rsync -avz --backup-dir=\"C:\\Users\\CUSTOM PC\\Desktop\\cursor-blueprint-enforcer\\backups\\remote-server\\2025-06-27T01-26-09-070Z\" your-username@your-server.com:~/cursor-config/ ~/projects/cursor-blueprint-enforcer/ ./backups/remote-server/"
+        ]
+      }
+    },
+    "log": [
+      "[2025-06-27T01:26:04.216Z] Starting machine synchronization...",
+      "[2025-06-27T01:26:04.217Z] Syncing machine: local-machine (local)",
+      "[2025-06-27T01:26:04.218Z] Creating backup for local-machine in C:\\Users\\CUSTOM PC\\Desktop\\cursor-blueprint-enforcer\\backups\\local-machine\\2025-06-27T01-26-04-218Z",
+      "[2025-06-27T01:26:04.218Z] Syncing Cursor config for local-machine",
+      "[2025-06-27T01:26:09.048Z] Syncing mindpal config for local-machine",
+      "[2025-06-27T01:26:09.050Z] Syncing deerflow config for local-machine",
+      "[2025-06-27T01:26:09.053Z] Syncing render config for local-machine",
+      "[2025-06-27T01:26:09.056Z] Syncing make config for local-machine",
+      "[2025-06-27T01:26:09.059Z] Syncing firebase config for local-machine",
+      "[2025-06-27T01:26:09.064Z] Syncing bigquery config for local-machine",
+      "[2025-06-27T01:26:09.067Z] Syncing neon config for local-machine",
+      "[2025-06-27T01:26:09.069Z] Validating sync for local-machine",
+      "[2025-06-27T01:26:09.070Z] ❌ Failed to sync local-machine: Validation failed: Required environment variable missing: RENDER_WEBHOOK_URL",
+      "[2025-06-27T01:26:09.070Z] Syncing machine: remote-server (remote)",
+      "[2025-06-27T01:26:09.070Z] Creating backup for remote-server in C:\\Users\\CUSTOM PC\\Desktop\\cursor-blueprint-enforcer\\backups\\remote-server\\2025-06-27T01-26-09-070Z",
+      "[2025-06-27T01:26:09.099Z] ❌ Failed to sync remote-server: Command failed: rsync -avz --backup-dir=\"C:\\Users\\CUSTOM PC\\Desktop\\cursor-blueprint-enforcer\\backups\\remote-server\\2025-06-27T01-26-09-070Z\" your-username@your-server.com:~/cursor-config/ ~/projects/cursor-blueprint-enforcer/ ./backups/remote-server/"
+    ]
+  }
+]

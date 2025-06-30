@@ -1,0 +1,19 @@
+{
+  "exportedAt": "2025-06-27T01:23:48.627Z",
+  "platform": "win32",
+  "cursorPaths": {
+    "settings": "C:\\Users\\CUSTOM PC\\AppData\\Roaming\\Cursor\\User\\settings.json",
+    "keybindings": "C:\\Users\\CUSTOM PC\\AppData\\Roaming\\Cursor\\User\\keybindings.json",
+    "extensions": "C:\\Users\\CUSTOM PC\\.cursor\\extensions",
+    "snippets": "C:\\Users\\CUSTOM PC\\AppData\\Roaming\\Cursor\\User\\snippets",
+    "workspace": "C:\\Users\\CUSTOM PC\\AppData\\Roaming\\Cursor\\User\\workspaceStorage"
+  },
+  "exportedFiles": [
+    "cursor-config\\settings.json",
+    "cursor-config\\keybindings.json",
+    "cursor-config\\extensions.json",
+    "cursor-config\\snippets",
+    "cursor-config\\workspaceStorage"
+  ],
+  "errors": []
+}

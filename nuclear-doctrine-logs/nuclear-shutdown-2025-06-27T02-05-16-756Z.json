@@ -1,0 +1,111 @@
+{
+  "timestamp": "2025-06-27T02:05:16.756Z",
+  "nuclearMode": true,
+  "violationCount": 1,
+  "maxViolations": 1,
+  "systemLocked": true,
+  "blacklistedTools": ["violating_tool"],
+  "nuclearLog": [
+    {
+      "timestamp": "2025-06-27T02:05:16.735Z",
+      "tool": "SYSTEM",
+      "operation": "NUCLEAR_MODE_ENABLED",
+      "event": "Nuclear mode activated",
+      "state": "ACTIVE",
+      "violationCount": 0,
+      "systemLocked": false,
+      "blacklistedTools": []
+    },
+    {
+      "timestamp": "2025-06-27T02:05:16.741Z",
+      "tool": "nuclear_demo_tool",
+      "operation": "demo_operation",
+      "event": "VALIDATION_SUCCESS",
+      "state": "COMPLIANT",
+      "violationCount": 0,
+      "systemLocked": false,
+      "blacklistedTools": []
+    },
+    {
+      "timestamp": "2025-06-27T02:05:16.743Z",
+      "tool": "nuclear_demo_tool",
+      "operation": "firebase_nuclear_operation",
+      "event": "VALIDATION_SUCCESS",
+      "state": "COMPLIANT",
+      "violationCount": 0,
+      "systemLocked": false,
+      "blacklistedTools": []
+    },
+    {
+      "timestamp": "2025-06-27T02:05:16.743Z",
+      "tool": "nuclear_demo_tool",
+      "operation": "firebase",
+      "event": "NUCLEAR_DATABASE_SUCCESS",
+      "state": "COMPLIANT",
+      "violationCount": 0,
+      "systemLocked": false,
+      "blacklistedTools": []
+    },
+    {
+      "timestamp": "2025-06-27T02:05:16.744Z",
+      "tool": "nuclear_demo_tool",
+      "operation": "neon_nuclear_operation",
+      "event": "VALIDATION_SUCCESS",
+      "state": "COMPLIANT",
+      "violationCount": 0,
+      "systemLocked": false,
+      "blacklistedTools": []
+    },
+    {
+      "timestamp": "2025-06-27T02:05:16.745Z",
+      "tool": "nuclear_demo_tool",
+      "operation": "neon",
+      "event": "NUCLEAR_DATABASE_SUCCESS",
+      "state": "COMPLIANT",
+      "violationCount": 0,
+      "systemLocked": false,
+      "blacklistedTools": []
+    },
+    {
+      "timestamp": "2025-06-27T02:05:16.746Z",
+      "tool": "nuclear_demo_tool",
+      "operation": "bigquery_nuclear_operation",
+      "event": "VALIDATION_SUCCESS",
+      "state": "COMPLIANT",
+      "violationCount": 0,
+      "systemLocked": false,
+      "blacklistedTools": []
+    },
+    {
+      "timestamp": "2025-06-27T02:05:16.746Z",
+      "tool": "nuclear_demo_tool",
+      "operation": "bigquery",
+      "event": "NUCLEAR_DATABASE_SUCCESS",
+      "state": "COMPLIANT",
+      "violationCount": 0,
+      "systemLocked": false,
+      "blacklistedTools": []
+    },
+    {
+      "timestamp": "2025-06-27T02:05:16.755Z",
+      "tool": "violating_tool",
+      "operation": "test_operation",
+      "event": "NUCLEAR_VIOLATION_1",
+      "state": "VIOLATION",
+      "violationCount": 1,
+      "systemLocked": false,
+      "blacklistedTools": []
+    }
+  ],
+  "finalViolation": {
+    "timestamp": "2025-06-27T02:05:16.755Z",
+    "tool": "violating_tool",
+    "operation": "test_operation",
+    "error": "BARTON DOCTRINE VIOLATION in violating_tool.test_operation: [\n  {\n    \"code\": \"invalid_type\",\n    \"expected\": \"string\",\n    \"received\": \"undefined\",\n    \"path\": [\n      \"source_id\"\n    ],\n    \"message\": \"Required\"\n  },\n  {\n    \"code\": \"invalid_type\",\n    \"expected\": \"string\",\n    \"received\": \"undefined\",\n    \"path\": [\n      \"process_id\"\n    ],\n    \"message\": \"Required\"\n  },\n  {\n    \"code\": \"invalid_union\",\n    \"unionErrors\": [\n      {\n        \"issues\": [\n          {\n            \"code\": \"invalid_type\",\n            \"expected\": \"boolean\",\n            \"received\": \"undefined\",\n            \"path\": [\n              \"validated\"\n            ],\n            \"message\": \"Required\"\n          }\n        ],\n        \"name\": \"ZodError\"\n      },\n      {\n        \"issues\": [\n          {\n            \"expected\": \"'pending' | 'approved' | 'rejected'\",\n            \"received\": \"undefined\",\n            \"code\": \"invalid_type\",\n            \"path\": [\n              \"validated\"\n            ],\n            \"message\": \"Required\"\n          }\n        ],\n        \"name\": \"ZodError\"\n      }\n    ],\n    \"path\": [\n      \"validated\"\n    ],\n    \"message\": \"Invalid input\"\n  },\n  {\n    \"code\": \"invalid_type\",\n    \"expected\": \"string\",\n    \"received\": \"undefined\",\n    \"path\": [\n      \"execution_signature\"\n    ],\n    \"message\": \"Required\"\n  },\n  {\n    \"code\": \"invalid_union\",\n    \"unionErrors\": [\n      {\n        \"issues\": [\n          {\n            \"code\": \"invalid_type\",\n            \"expected\": \"date\",\n            \"received\": \"undefined\",\n            \"path\": [\n              \"timestamp_last_touched\"\n            ],\n            \"message\": \"Required\"\n          }\n        ],\n        \"name\": \"ZodError\"\n      },\n      {\n        \"issues\": [\n          {\n            \"code\": \"invalid_type\",\n            \"expected\": \"string\",\n            \"received\": \"undefined\",\n            \"path\": [\n              \"timestamp_last_touched\"\n            ],\n            \"message\": \"Required\"\n          }\n        ],\n        \"name\": \"ZodError\"\n      }\n    ],\n    \"path\": [\n      \"timestamp_last_touched\"\n    ],\n    \"message\": \"Invalid input\"\n  }\n]",
+    "payload": {
+      "invalid_field": "test",
+      "missing_required_fields": true,
+      "no_barton_doctrine_compliance": true
+    }
+  }
+}

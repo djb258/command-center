@@ -1,0 +1,59 @@
+{
+  "machines": [
+    {
+      "name": "local-machine",
+      "type": "local",
+      "syncPaths": [
+        "~/.cursor/settings.json",
+        "~/.cursor/keybindings.json",
+        "~/.cursor/snippets/",
+        "~/projects/cursor-blueprint-enforcer/"
+      ],
+      "tools": [
+        "cursor",
+        "mindpal",
+        "deerflow",
+        "render",
+        "make",
+        "firebase",
+        "bigquery",
+        "neon"
+      ]
+    },
+    {
+      "name": "remote-server",
+      "type": "remote",
+      "host": "your-server.com",
+      "user": "your-username",
+      "sshKey": "~/.ssh/id_rsa",
+      "syncPaths": [
+        "~/cursor-config/",
+        "~/projects/cursor-blueprint-enforcer/"
+      ],
+      "tools": [
+        "cursor",
+        "mindpal",
+        "deerflow",
+        "render",
+        "make"
+      ]
+    }
+  ],
+  "cursorConfig": {
+    "settingsPath": "~/.cursor/settings.json",
+    "extensionsPath": "~/.cursor/extensions/",
+    "keybindingsPath": "~/.cursor/keybindings.json",
+    "snippetsPath": "~/.cursor/snippets/"
+  },
+  "toolsConfig": {
+    "envTemplatePath": "env.template",
+    "packageJsonPath": "package.json",
+    "doctrinePath": "DOCTRINE.md",
+    "schemasPath": "src/schemas/"
+  },
+  "syncOptions": {
+    "backupBeforeSync": true,
+    "validateAfterSync": true,
+    "notifyOnCompletion": true
+  }
+}

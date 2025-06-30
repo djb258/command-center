@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🔒 Running Barton Doctrine validation..."
+
+# Run linting and formatting
+npx lint-staged
+
+# Critical: Validate all payloads against Barton Doctrine
+echo "🔤 Validating SPVPET/STAMPED/STACKED schema compliance..."
+npm run validate:barton-doctrine
+
+# Check for any violation reports
+if [ -d "barton-doctrine-logs" ] && [ "$(ls -A barton-doctrine-logs/violations-*.json 2>/dev/null)" ]; then
+  echo "🚨 CRITICAL: Barton Doctrine violations detected!"
+  echo "   Review violation reports in barton-doctrine-logs/"
+  echo "   All payloads MUST comply with SPVPET/STAMPED/STACKED schema"
+  exit 1
+fi
+
+echo "✅ Barton Doctrine compliance verified" 

@@ -1,0 +1,53 @@
+{
+  "mcp": {
+    "version": "1.0.0",
+    "enabled": true,
+    "description": "Model Context Protocol integration for external services",
+    "providers": [
+      {
+        "name": "weather",
+        "displayName": "Weather API",
+        "type": "rest",
+        "enabled": true,
+        "endpoint": "https://api.openweathermap.org/data/2.5/weather",
+        "authentication": {
+          "type": "api_key",
+          "header": "X-API-Key",
+          "envVar": "OPENWEATHER_API_KEY"
+        },
+        "config": {
+          "baseUrl": "https://api.openweathermap.org/data/2.5",
+          "timeout": 5000,
+          "retryAttempts": 3
+        },
+        "endpoints": {
+          "currentWeather": "/weather",
+          "forecast": "/forecast",
+          "airPollution": "/air_pollution"
+        },
+        "usage": {
+          "purpose": "Provide weather context for development environment and testing",
+          "rateLimits": "60 calls/minute (free tier)",
+          "dataFormat": "JSON"
+        }
+      }
+    ],
+    "settings": {
+      "autoDiscovery": true,
+      "cacheResponses": true,
+      "cacheDuration": 300,
+      "enableLogging": true,
+      "logLevel": "info"
+    },
+    "security": {
+      "requireAuthentication": true,
+      "validateSSL": true,
+      "rateLimiting": true
+    },
+    "integration": {
+      "cursorChat": true,
+      "backgroundAgent": true,
+      "contextAware": true
+    }
+  }
+} 

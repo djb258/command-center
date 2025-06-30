@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-06-27T17:29:04.665Z",
+  "total_violations": 1,
+  "enforcement_enabled": true,
+  "strict_mode": true,
+  "violations": [
+    {
+      "timestamp": "2025-06-27T17:29:04.650Z",
+      "tool": "simple-orchestrator",
+      "operation": "orchestration-test",
+      "error": "[\n  {\n    \"code\": \"invalid_type\",\n    \"expected\": \"string\",\n    \"received\": \"undefined\",\n    \"path\": [\n      \"source_id\"\n    ],\n    \"message\": \"Required\"\n  },\n  {\n    \"code\": \"invalid_type\",\n    \"expected\": \"string\",\n    \"received\": \"undefined\",\n    \"path\": [\n      \"process_id\"\n    ],\n    \"message\": \"Required\"\n  },\n  {\n    \"code\": \"invalid_union\",\n    \"unionErrors\": [\n      {\n        \"issues\": [\n          {\n            \"code\": \"invalid_type\",\n            \"expected\": \"boolean\",\n            \"received\": \"undefined\",\n            \"path\": [\n              \"validated\"\n            ],\n            \"message\": \"Required\"\n          }\n        ],\n        \"name\": \"ZodError\"\n      },\n      {\n        \"issues\": [\n          {\n            \"expected\": \"'pending' | 'approved' | 'rejected'\",\n            \"received\": \"undefined\",\n            \"code\": \"invalid_type\",\n            \"path\": [\n              \"validated\"\n            ],\n            \"message\": \"Required\"\n          }\n        ],\n        \"name\": \"ZodError\"\n      }\n    ],\n    \"path\": [\n      \"validated\"\n    ],\n    \"message\": \"Invalid input\"\n  },\n  {\n    \"code\": \"invalid_type\",\n    \"expected\": \"string\",\n    \"received\": \"undefined\",\n    \"path\": [\n      \"execution_signature\"\n    ],\n    \"message\": \"Required\"\n  },\n  {\n    \"code\": \"invalid_union\",\n    \"unionErrors\": [\n      {\n        \"issues\": [\n          {\n            \"code\": \"invalid_type\",\n            \"expected\": \"date\",\n            \"received\": \"undefined\",\n            \"path\": [\n              \"timestamp_last_touched\"\n            ],\n            \"message\": \"Required\"\n          }\n        ],\n        \"name\": \"ZodError\"\n      },\n      {\n        \"issues\": [\n          {\n            \"code\": \"invalid_type\",\n            \"expected\": \"string\",\n            \"received\": \"undefined\",\n            \"path\": [\n              \"timestamp_last_touched\"\n            ],\n            \"message\": \"Required\"\n          }\n        ],\n        \"name\": \"ZodError\"\n      }\n    ],\n    \"path\": [\n      \"timestamp_last_touched\"\n    ],\n    \"message\": \"Invalid input\"\n  }\n]",
+      "payload": {
+        "test_results": [
+          {
+            "success": true,
+            "step": "/",
+            "data": {
+              "message": "DeerFlow is alive"
+            }
+          },
+          {
+            "success": false,
+            "step": "/fire",
+            "error": "HTTP 422: Unprocessable Entity"
+          },
+          {
+            "success": true,
+            "step": "/scrape",
+            "data": {
+              "status": "success",
+              "url": "https://example.com",
+              "content": "Error scraping https://example.com: Browserless error: 500 - <html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>openresty/1.25.3.1</center>\r\n</body>\r\n</html>\r\n",
+              "content_length": 244
+            }
+          },
+          {
+            "success": true,
+            "step": "/pingpong",
+            "data": {
+              "response": "Echo: "
+            }
+          }
+        ],
+        "timestamp": "2025-06-27T17:29:04.647Z",
+        "tool_name": "simple-orchestrator"
+      }
+    }
+  ]
+}

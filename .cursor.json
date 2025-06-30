@@ -1,0 +1,141 @@
+{
+  "version": "1.0.0",
+  "name": "cursor-blueprint-enforcer",
+  "description": "Enhanced productivity workspace with BugBot, Background Agent, Memory Bank, and Project Context",
+  "bugBot": {
+    "enabled": true,
+    "autoReview": true,
+    "prScanning": true,
+    "projectSpecific": {
+      "enforceBartronDoctrine": true,
+      "validateBlueprints": true,
+      "checkCompliance": true
+    }
+  },
+  "backgroundAgent": {
+    "enabled": true,
+    "projectRules": [
+      "Enforce Barton Doctrine compliance",
+      "Validate blueprint structures",
+      "Maintain TypeScript strict mode",
+      "Generate tests for integration scripts"
+    ],
+    "autoRefactorPatterns": [
+      "scripts/*.ts",
+      "src/**/*.ts",
+      "src/**/*.js"
+    ],
+    "testGenerationPaths": [
+      "src/__tests__/"
+    ]
+  },
+  "memoryBank": {
+    "workspaceBank": "core_conventions",
+    "autoCapture": {
+      "patterns": [
+        "src/schemas/*.ts",
+        "scripts/*_integration.ts", 
+        "docs/*.md",
+        "DOCTRINE.md",
+        "BARTON_DOCTRINE_ENFORCEMENT.md"
+      ],
+      "excludePatterns": [
+        "node_modules/**",
+        "*.log",
+        "barton-doctrine-logs/**"
+      ]
+    },
+    "conventions": {
+      "namingPatterns": {
+        "integrationScripts": "*_integration.ts",
+        "testFiles": "*.test.ts",
+        "schemaFiles": "*-schema.ts",
+        "doctrineFiles": "*_doctrine*.ts"
+      },
+      "blueprintStructures": {
+        "firebaseTemplates": "firebase/*.template.json",
+        "schemaTemplates": "schemas/*_template.*",
+        "renderConfigs": "render.yaml"
+      }
+    }
+  },
+  "projectContext": {
+    "enabled": true,
+    "beta": true,
+    "contextAwareness": {
+      "includeDoctrineFiles": true,
+      "includeBlueprintRegistry": true,
+      "includeIntegrationScripts": true,
+      "includeValidationReports": true
+    },
+    "importantPaths": [
+      "src/core/",
+      "scripts/",
+      "docs/",
+      "DOCTRINE.md",
+      "BARTON_DOCTRINE_ENFORCEMENT.md",
+      "schemas/"
+    ]
+  },
+  "model": {
+    "default": "gemini-2.5-pro",
+    "fallback": "gpt-4.1",
+    "contextSpecific": {
+      "doctrineEnforcement": "gemini-2.5-pro",
+      "codeGeneration": "gpt-4.1",
+      "blueprintValidation": "gemini-2.5-pro"
+    }
+  },
+  "mcp": {
+    "enabled": true,
+    "providers": [
+      {
+        "name": "weather",
+        "endpoint": "https://api.openweathermap.org/data/2.5/weather",
+        "type": "rest",
+        "authentication": "api_key",
+        "config": {
+          "apiKey": "${OPENWEATHER_API_KEY}",
+          "baseUrl": "https://api.openweathermap.org/data/2.5"
+        }
+      }
+    ]
+  },
+  "bartronDoctrine": {
+    "enforcement": "strict",
+    "validationOnSave": true,
+    "complianceChecking": true,
+    "nuclearProtocols": true
+  },
+  "blueprintManagement": {
+    "autoValidation": true,
+    "schemaEnforcement": true,
+    "templateCompliance": true
+  },
+  "integrationScripts": {
+    "autoTesting": true,
+    "complianceValidation": true,
+    "documentationGeneration": true
+  },
+  "files": {
+    "watchPatterns": [
+      "src/**/*.ts",
+      "scripts/**/*.ts",
+      "schemas/**/*",
+      "docs/**/*.md",
+      "*.md"
+    ],
+    "excludeFromWatch": [
+      "barton-doctrine-logs/**",
+      "nuclear-doctrine-logs/**",
+      "node_modules/**",
+      "*.log"
+    ]
+  },
+  "commands": {
+    "validateDoctrine": "npm run validate:doctrine",
+    "enforceCompliance": "npm run enforce:compliance",
+    "generateBlueprint": "npm run generate:blueprint",
+    "testIntegrations": "npm run test:integrations"
+  }
+} 

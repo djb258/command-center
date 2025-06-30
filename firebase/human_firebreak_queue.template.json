@@ -1,0 +1,18 @@
+{
+  "source_id": "human_intervention",
+  "process_id": "",
+  "validated": "pending",
+  "promoted_to": "",
+  "execution_signature": "",
+  "timestamp_last_touched": "",
+  "ttl": 7200,
+  "collection_type": "human_firebreak_queue",
+  "firebreak_data": {
+    "agent_id": "",
+    "reason": "",
+    "manual_override_required": true,
+    "priority": "high",
+    "escalation_level": 1,
+    "payload": {}
+  }
+}

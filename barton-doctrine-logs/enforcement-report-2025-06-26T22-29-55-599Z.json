@@ -1,0 +1,43 @@
+{
+  "timestamp": "2025-06-26T22:29:55.595Z",
+  "enforcement_summary": {
+    "total_tools_checked": 10,
+    "non_compliant_tools": 10,
+    "fixed_tools": 10,
+    "compliance_rate": "0.00%"
+  },
+  "non_compliant_tools": [
+    "abacus_ai_integration",
+    "apify_integration",
+    "browserless_integration",
+    "deerflow_integration",
+    "genspark_integration",
+    "google_workspace_integration",
+    "make_integration",
+    "mindpal_integration",
+    "render_integration",
+    "rtrvr_integration"
+  ],
+  "fixed_tools": [
+    "abacus_ai_integration",
+    "apify_integration",
+    "browserless_integration",
+    "deerflow_integration",
+    "genspark_integration",
+    "google_workspace_integration",
+    "make_integration",
+    "mindpal_integration",
+    "render_integration",
+    "rtrvr_integration"
+  ],
+  "enforcement_actions": [
+    "Added mandatory Barton Doctrine imports",
+    "Added mandatory initialization calls",
+    "Created backup files for all modified tools"
+  ],
+  "next_steps": [
+    "Run npm run validate:barton-doctrine to verify compliance",
+    "Test all modified tools to ensure functionality",
+    "All new tools must use npm run generate:tool"
+  ]
+}

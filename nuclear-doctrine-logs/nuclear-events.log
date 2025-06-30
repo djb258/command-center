@@ -1,0 +1,10 @@
+{"timestamp":"2025-06-27T02:05:16.735Z","tool":"SYSTEM","operation":"NUCLEAR_MODE_ENABLED","event":"Nuclear mode activated","state":"ACTIVE","violationCount":0,"systemLocked":false,"blacklistedTools":[]}
+{"timestamp":"2025-06-27T02:05:16.741Z","tool":"nuclear_demo_tool","operation":"demo_operation","event":"VALIDATION_SUCCESS","state":"COMPLIANT","violationCount":0,"systemLocked":false,"blacklistedTools":[]}
+{"timestamp":"2025-06-27T02:05:16.743Z","tool":"nuclear_demo_tool","operation":"firebase_nuclear_operation","event":"VALIDATION_SUCCESS","state":"COMPLIANT","violationCount":0,"systemLocked":false,"blacklistedTools":[]}
+{"timestamp":"2025-06-27T02:05:16.743Z","tool":"nuclear_demo_tool","operation":"firebase","event":"NUCLEAR_DATABASE_SUCCESS","state":"COMPLIANT","violationCount":0,"systemLocked":false,"blacklistedTools":[]}
+{"timestamp":"2025-06-27T02:05:16.744Z","tool":"nuclear_demo_tool","operation":"neon_nuclear_operation","event":"VALIDATION_SUCCESS","state":"COMPLIANT","violationCount":0,"systemLocked":false,"blacklistedTools":[]}
+{"timestamp":"2025-06-27T02:05:16.745Z","tool":"nuclear_demo_tool","operation":"neon","event":"NUCLEAR_DATABASE_SUCCESS","state":"COMPLIANT","violationCount":0,"systemLocked":false,"blacklistedTools":[]}
+{"timestamp":"2025-06-27T02:05:16.746Z","tool":"nuclear_demo_tool","operation":"bigquery_nuclear_operation","event":"VALIDATION_SUCCESS","state":"COMPLIANT","violationCount":0,"systemLocked":false,"blacklistedTools":[]}
+{"timestamp":"2025-06-27T02:05:16.746Z","tool":"nuclear_demo_tool","operation":"bigquery","event":"NUCLEAR_DATABASE_SUCCESS","state":"COMPLIANT","violationCount":0,"systemLocked":false,"blacklistedTools":[]}
+{"timestamp":"2025-06-27T02:05:16.755Z","tool":"violating_tool","operation":"test_operation","event":"NUCLEAR_VIOLATION_1","state":"VIOLATION","violationCount":1,"systemLocked":false,"blacklistedTools":[]}
+{"timestamp":"2025-06-27T02:05:16.756Z","tool":"SYSTEM","operation":"NUCLEAR_SHUTDOWN","event":"System shutdown triggered","state":"LOCKED","violationCount":1,"systemLocked":true,"blacklistedTools":["violating_tool"]}

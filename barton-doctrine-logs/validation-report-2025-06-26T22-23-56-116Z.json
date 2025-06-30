@@ -1,0 +1,91 @@
+{
+  "timestamp": "2025-06-26T22:23:56.113Z",
+  "validation_summary": {
+    "total_violations": 14,
+    "tools_checked": 11,
+    "schemas_checked": 5,
+    "compliance_status": "VIOLATIONS_DETECTED"
+  },
+  "detailed_results": {
+    "tools": {
+      "checked": 11,
+      "violations": 14,
+      "details": [
+        {
+          "tool": "mindpal_integration.ts",
+          "violations": [
+            "Missing Barton Doctrine import"
+          ]
+        },
+        {
+          "tool": "deerflow_integration.ts",
+          "violations": [
+            "Missing Barton Doctrine import"
+          ]
+        },
+        {
+          "tool": "render_integration.ts",
+          "violations": [
+            "Missing Barton Doctrine import"
+          ]
+        },
+        {
+          "tool": "make_integration.ts",
+          "violations": [
+            "Missing Barton Doctrine import"
+          ]
+        },
+        {
+          "tool": "firebase_push.ts",
+          "violations": [
+            "Missing Barton Doctrine import",
+            "Database operations without Barton Doctrine validation"
+          ]
+        },
+        {
+          "tool": "bigquery_ingest.ts",
+          "violations": [
+            "Missing Barton Doctrine import",
+            "Database operations without Barton Doctrine validation"
+          ]
+        },
+        {
+          "tool": "neon_sync.ts",
+          "violations": [
+            "Missing Barton Doctrine import",
+            "Database operations without Barton Doctrine validation"
+          ]
+        },
+        {
+          "tool": "rtrvr_integration.ts",
+          "violations": [
+            "Database operations without Barton Doctrine validation"
+          ]
+        },
+        {
+          "tool": "browserless_integration.ts",
+          "violations": [
+            "Missing Barton Doctrine import"
+          ]
+        },
+        {
+          "tool": "apify_integration.ts",
+          "violations": [
+            "Missing Barton Doctrine import"
+          ]
+        },
+        {
+          "tool": "genspark_integration.ts",
+          "violations": [
+            "Missing Barton Doctrine import"
+          ]
+        }
+      ]
+    },
+    "schemas": {
+      "checked": 5,
+      "violations": 0,
+      "details": []
+    }
+  }
+}

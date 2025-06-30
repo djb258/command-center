@@ -1,0 +1,17 @@
+{
+  "source_id": "agent_system",
+  "process_id": "",
+  "validated": false,
+  "promoted_to": "",
+  "execution_signature": "",
+  "timestamp_last_touched": "",
+  "ttl": 3600,
+  "collection_type": "agent_whiteboard",
+  "task_data": {
+    "blueprint_id": "",
+    "agent_id": "",
+    "task_type": "",
+    "priority": "medium",
+    "status": "pending"
+  }
+}

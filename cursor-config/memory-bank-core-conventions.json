@@ -1,0 +1,98 @@
+{
+  "memoryBank": {
+    "name": "core_conventions",
+    "version": "1.0.0",
+    "description": "Memory bank for capturing naming conventions, schema references, and blueprint structures in the cursor-blueprint-enforcer project",
+    "initialized": true,
+    "autoCapture": true,
+    "categories": [
+      "naming",
+      "schemas", 
+      "blueprints",
+      "patterns",
+      "conventions"
+    ],
+    "capturedConventions": {
+      "fileNamingPatterns": {
+        "integrationScripts": "*_integration.ts",
+        "testFiles": "*.test.ts",
+        "schemaFiles": "*-schema.ts",
+        "doctrineFiles": "*_doctrine*.ts",
+        "templateFiles": "*.template.*"
+      },
+      "directoryStructure": {
+        "scripts": "Integration and utility scripts",
+        "src/core": "Core Barton Doctrine enforcement logic",
+        "src/schemas": "TypeScript schema definitions",
+        "src/__tests__": "Test files for validation",
+        "firebase": "Firebase template configurations",
+        "schemas": "JSON/SQL template schemas",
+        "docs": "Project documentation"
+      },
+      "blueprintStructures": {
+        "firebaseTemplates": {
+          "location": "firebase/*.template.json",
+          "purpose": "Firebase service configurations",
+          "examples": ["agent_task.template.json", "blueprint_registry.template.json"]
+        },
+        "schemaTemplates": {
+          "location": "schemas/*_template.*",
+          "purpose": "Database and API schema templates",
+          "examples": ["spvpet_template.json", "stacked_template.json"]
+        },
+        "renderConfigs": {
+          "location": "render.yaml",
+          "purpose": "Render.com deployment configuration"
+        }
+      },
+      "codingConventions": {
+        "typescript": {
+          "strictMode": true,
+          "quoteStyle": "double",
+          "importOrganization": true
+        },
+        "testingPatterns": {
+          "testFileLocation": "src/__tests__/",
+          "testFileNaming": "*.test.ts",
+          "coverageRequirement": "integration scripts"
+        },
+        "integrationPatterns": {
+          "scriptNaming": "*_integration.ts",
+          "backupNaming": "*.backup.*",
+          "complianceChecking": "mandatory"
+        }
+      },
+      "doctrineCompliance": {
+        "bartronDoctrine": {
+          "enforcement": "strict",
+          "validation": "mandatory",
+          "nuclearProtocols": "enabled"
+        },
+        "validationReports": {
+          "location": "barton-doctrine-logs/",
+          "frequency": "on-save",
+          "retention": "90 days"
+        }
+      }
+    },
+    "autoCaptureRules": {
+      "includePatterns": [
+        "src/schemas/*.ts",
+        "scripts/*_integration.ts",
+        "docs/*.md",
+        "DOCTRINE.md",
+        "BARTON_DOCTRINE_ENFORCEMENT.md",
+        "firebase/*.template.json",
+        "schemas/*.template.*"
+      ],
+      "excludePatterns": [
+        "node_modules/**",
+        "*.log",
+        "barton-doctrine-logs/**",
+        "nuclear-doctrine-logs/**"
+      ]
+    },
+    "lastUpdated": "2025-01-27T00:00:00.000Z",
+    "status": "active"
+  }
+} 
