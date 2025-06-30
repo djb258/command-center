@@ -1,0 +1,39 @@
+{
+  "name": "command-center",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run validate:barton-doctrine && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "validate:barton-doctrine": "node tools/validation/doctrine-validator.js",
+    "prebuild": "npm run validate:barton-doctrine",
+    "vercel-build": "npm run validate:barton-doctrine && next build"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.18",
+    "@heroicons/react": "^2.1.1",
+    "@types/better-sqlite3": "^7.6.9",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/uuid": "^9.0.8",
+    "better-sqlite3": "^9.4.3",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "lucide-react": "^0.468.0",
+    "next": "14.2.5",
+    "react": "^18",
+    "react-dom": "^18",
+    "sqlite3": "^5.1.7",
+    "typescript": "^5",
+    "uuid": "^10.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^0.0.0",
+    "@types/better-sqlite3": "^7.6.9",
+    "tailwindcss": "^3.4.1"
+  }
+}
