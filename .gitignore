@@ -2,6 +2,7 @@
 config.yaml
 .env
 *.env
+template.env
 
 # Logs
 *.log
