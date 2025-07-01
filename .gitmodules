@@ -1,0 +1,3 @@
+[submodule "screenpipe"]
+	path = screenpipe
+	url = https://github.com/djb258/screenpipe.git
