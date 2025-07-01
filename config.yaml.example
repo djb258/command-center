@@ -1,0 +1,41 @@
+screenpipe:
+  data_dir: ~/.screenpipe/data
+  poll_interval: 10
+
+mindpal:
+  base_url: https://api.mindpal.com
+  api_key: your-mindpal-api-key
+  agent_id: your-mindpal-agent-id
+  chatbot_url: https://chatbot.getmindpal.com/your-chatbot-id
+  chatbot_id: your-chatbot-id
+
+obsidian:
+  vault_dir: ~/Documents/Obsidian Vault
+  template_path: templates/note_template.md
+
+ui:
+  port: 3000
+  host: localhost
+  title: "ScreenPipe Assistant"
+
+features:
+  hotkeys_enabled: false
+  voice_commands_enabled: false
+  deerflow_integration_enabled: false
+  auto_approve: false  # Require manual approval before writing to Obsidian
+
+# Future features
+deerflow:
+  webhook_url: https://your-deerflow-instance.com/webhook
+  api_key: your-deerflow-api-key
+
+vercel:
+  dashboard_url: https://your-vercel-dashboard.vercel.app
+  api_key: your-vercel-api-key
+
+# TODO: Future enhancements
+future_features:
+  hotkey_command_bar: false
+  voice_command_triggers: false
+  deerflow_webhook_triggers: false
+  vercel_dashboard_hooks: false 

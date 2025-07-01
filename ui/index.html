@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScreenPipe Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <h1>🚀 ScreenPipe Assistant</h1>
+                <span class="subtitle">Mindpal → Obsidian Bridge</span>
+            </div>
+            <div class="header-right">
+                <button id="startBridge" class="btn btn-primary">Start Bridge</button>
+                <button id="stopBridge" class="btn btn-danger" disabled>Stop Bridge</button>
+                <button id="settingsBtn" class="btn btn-secondary">⚙️ Settings</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Left Panel - Status & Controls -->
+            <div class="left-panel">
+                <div class="status-card">
+                    <h3>📊 Bridge Status</h3>
+                    <div class="status-indicator">
+                        <span id="bridgeStatus" class="status-offline">Offline</span>
+                    </div>
+                    <div class="status-details">
+                        <p><strong>ScreenPipe Data:</strong> <span id="dataDir">~/.screenpipe/data</span></p>
+                        <p><strong>Obsidian Vault:</strong> <span id="vaultDir">~/Documents/Obsidian Vault</span></p>
+                        <p><strong>Mindpal Agent:</strong> <span id="agentId">screenpipe-bridge-assistant</span></p>
+                    </div>
+                </div>
+
+                <div class="stats-card">
+                    <h3>📈 Statistics</h3>
+                    <div class="stat-item">
+                        <span class="stat-label">Files Processed:</span>
+                        <span id="filesProcessed" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Notes Created:</span>
+                        <span id="notesCreated" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Pending Approval:</span>
+                        <span id="pendingApprovals" class="stat-value">0</span>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <h3>⚡ Quick Actions</h3>
+                    <button id="refreshStats" class="btn btn-small">🔄 Refresh</button>
+                    <button id="openVault" class="btn btn-small">📁 Open Vault</button>
+                    <button id="openDataDir" class="btn btn-small">📂 Open Data Dir</button>
+                </div>
+            </div>
+
+            <!-- Center Panel - Chat Interface -->
+            <div class="center-panel">
+                <div class="chat-header">
+                    <h3>💬 Mindpal Chat Interface</h3>
+                    <div class="chat-controls">
+                        <button id="clearChat" class="btn btn-small">🗑️ Clear</button>
+                        <button id="exportChat" class="btn btn-small">📤 Export</button>
+                    </div>
+                </div>
+                
+                <div class="chat-container">
+                    <div id="chatMessages" class="chat-messages">
+                        <div class="welcome-message">
+                            <h4>Welcome to ScreenPipe Assistant!</h4>
+                            <p>Start the bridge to begin processing ScreenPipe captures through Mindpal.</p>
+                            <p>Your Mindpal agent is configured at: <a href="https://chatbot.getmindpal.com/screenpipe-bridge-assistant" target="_blank">screenpipe-bridge-assistant</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input-container">
+                        <textarea id="chatInput" placeholder="Send a message to Mindpal or type additional prompts..." rows="3"></textarea>
+                        <button id="sendMessage" class="btn btn-primary">Send</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel - Approval Queue -->
+            <div class="right-panel">
+                <div class="approval-queue">
+                    <h3>⏳ Approval Queue</h3>
+                    <div id="approvalList" class="approval-list">
+                        <div class="empty-queue">
+                            <p>No pending approvals</p>
+                            <small>Processed files will appear here for review</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-notes">
+                    <h3>📝 Recent Notes</h3>
+                    <div id="recentNotesList" class="recent-notes-list">
+                        <div class="empty-notes">
+                            <p>No recent notes</p>
+                            <small>Approved notes will appear here</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Modal -->
+        <div id="settingsModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>⚙️ Settings</h3>
+                    <button id="closeSettings" class="btn-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="settingsForm">
+                        <div class="form-group">
+                            <label for="dataDirInput">ScreenPipe Data Directory:</label>
+                            <div class="input-group">
+                                <input type="text" id="dataDirInput" placeholder="~/.screenpipe/data">
+                                <button type="button" id="browseDataDir" class="btn btn-small">Browse</button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="vaultDirInput">Obsidian Vault Directory:</label>
+                            <div class="input-group">
+                                <input type="text" id="vaultDirInput" placeholder="~/Documents/Obsidian Vault">
+                                <button type="button" id="browseVaultDir" class="btn btn-small">Browse</button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mindpalApiKey">Mindpal API Key:</label>
+                            <input type="password" id="mindpalApiKey" placeholder="sk-...">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="agentIdInput">Agent ID:</label>
+                            <input type="text" id="agentIdInput" placeholder="your-agent-id">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="autoApprove">Auto-approve notes:</label>
+                            <input type="checkbox" id="autoApprove">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pollInterval">Poll Interval (seconds):</label>
+                            <input type="number" id="pollInterval" min="1" max="60" value="10">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="saveSettings" class="btn btn-primary">Save Settings</button>
+                    <button id="cancelSettings" class="btn btn-secondary">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html> 

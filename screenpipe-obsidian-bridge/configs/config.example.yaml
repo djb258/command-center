@@ -1,0 +1,51 @@
+# ScreenPipe Obsidian Bridge Configuration
+
+# ScreenPipe settings
+screenpipe:
+  # Path to ScreenPipe output directory
+  output_path: '/path/to/screenpipe/output'
+  # File patterns to watch (OCR text, transcripts, etc.)
+  watch_patterns:
+    - '*.txt'
+    - '*.json'
+    - '*.md'
+
+# LLM Configuration
+llm:
+  # Provider: "openai", "anthropic", "custom"
+  provider: 'openai'
+  # API endpoint (for custom providers)
+  endpoint: 'https://api.openai.com/v1'
+  # API key (set via environment variable OPENAI_API_KEY is recommended)
+  api_key: 'your-api-key-here'
+  # Model to use
+  model: 'gpt-4'
+  # Max tokens for response
+  max_tokens: 2000
+  # Temperature for creativity (0.0-1.0)
+  temperature: 0.7
+
+# Obsidian vault settings
+obsidian:
+  # Path to your Obsidian vault
+  vault_path: '/path/to/obsidian/vault'
+  # Subdirectory within vault for ScreenPipe notes
+  notes_subdirectory: 'ScreenPipe'
+  # Template for note filenames (supports timestamp formatting)
+  filename_template: 'screenpipe-{{.Timestamp}}-{{.Hash}}.md'
+
+# Processing settings
+processing:
+  # Batch size for processing multiple files
+  batch_size: 5
+  # Delay between processing batches (seconds)
+  batch_delay: 30
+  # Enable doctrine compliance checking
+  enable_doctrine_check: true
+
+# Logging
+logging:
+  # Log level: debug, info, warn, error
+  level: 'info'
+  # Log file path (empty for stdout)
+  file: ''
